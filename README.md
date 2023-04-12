@@ -6,6 +6,26 @@
 ## Assignment
 
  For this activity follow [Neural machine translation with a Transformer and Keras](https://www.tensorflow.org/text/tutorials/transformer).
+ 
+## Data
+
+The data used in the tutorial was the Portuguese-English translation dataset from TensorFlow. This data was pre-processed by tokenizing it. The two text tokenizers used for this project which included the English language tokens and Portuguese language tokens. The data was encoded into tokens in pre-processing which will then be later in the process be decoded back into human-readable text.
+
+## Transformer Compentents
+
+The transformer model puts together all the layers previously created and adds the linear dense layer which will output the token probabilities based on the resulting vectors from each layer location. Parts of the transformer include:
+
+# Encoder
+
+This part of the model encodes the given data into tokens.
+
+# Decoder
+
+Based on the way the data was encoded, the decoder puts it back into reradable text.
+
+# Final layer
+
+The final layer is the dense layer from the transformer which will give the output token probabilities.
 
 ## Submission
 
