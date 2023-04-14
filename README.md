@@ -13,19 +13,20 @@ The data used in the tutorial was the Portuguese-English translation dataset fro
 
 ## Transformer Compentents
 
-The transformer model puts together all the layers previously created and adds the linear dense layer which will output the token probabilities based on the resulting vectors from each layer location. Parts of the transformer include:
+The transformer model puts together all the layers previously created and adds the linear dense layer which will output the token probabilities based on the resulting vectors from each layer location. The architecture of the transformer model process connected sets of tokens through self-attnetion. The process groes from the self-attention layer to layer normalization to the dense layer (final layer).
 
-# Encoder
+Parts of the transformer include:
 
-This part of the model encodes the given data into tokens.
+# Self-attention Layer
+Both the encoder and decoder in the self-attention layer use attention mechanisms. The input vector in this layer is compared to every other vector in the layer to compute the weights. It is then summed with the other vectors to form the attention weightedd sum value. 
 
-# Decoder
+# Feed Forward network and Layer Normalization
 
-Based on the way the data was encoded, the decoder puts it back into reradable text.
+In both the encoder and the decoder the feed foward network is made up of two linear layers. There is a ReLU activation in-between the two layers and a dropout layer. The layer normalization is a process that uses mean and stardard distribution to reset the data points inbetween different layers. Normalization is used so that the AI trains faster and is more accurate.
 
-# Final layer
+# Final Layer
 
-The final layer is the dense layer from the transformer which will give the output token probabilities.
+The final layer is the dense layer from the transformer which will give the output token probabilities. The output of the decoder used previously is the input to the final linear layer.
 
 ## Submission
 
